@@ -60,7 +60,7 @@
   io(golds, function (g) { setTimeout(function () { g.classList.add('gold-lit'); }, 150); }, { threshold: 0.9, rootMargin: '0px 0px -12% 0px' });
 
   /* 3) Kennzahlen zählen hoch ------------------------------------------ */
-  var nums = Array.prototype.slice.call(document.querySelectorAll('.rules .big, .funds .gold'));
+  var nums = Array.prototype.slice.call(document.querySelectorAll('.rules .big, .funds .gold, .count'));
   var easeOut = function (t) { return 1 - Math.pow(1 - t, 3); };
   nums.forEach(function (el) {
     var m = el.textContent.match(/^(\d+(?:[.,]\d+)?)(.*)$/);
@@ -79,6 +79,9 @@
     };
     requestAnimationFrame(tick);
   }, { threshold: 0.5 });
+
+  /* In-View-Klasse für Grafiken */
+  io(Array.prototype.slice.call(document.querySelectorAll('[data-inview]')), function (el) { el.classList.add('in'); }, { threshold: 0.35 });
 
   /* 4) Ablauf-Linie über den drei Schritten ---------------------------- */
   Array.prototype.slice.call(document.querySelectorAll('[data-flow]')).forEach(function (grid) {

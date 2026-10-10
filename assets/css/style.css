@@ -241,3 +241,33 @@ h1.wsplit .gold-words{background:none;animation:none}
   [data-flow] .card.flow-on{border-left-color:#C9A14E}
 }
 .no-motion .gold-lit-pending{-webkit-text-fill-color:transparent}
+
+/* ===== Sektion «Ein Tropfen im Ozean» ===== */
+.ocean-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.ocean-big{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;line-height:1}
+.ocean-big .count{font-size:clamp(88px,11vw,168px);font-weight:800;letter-spacing:-.06em;font-variant-numeric:tabular-nums}
+.ocean-unit{font-size:clamp(26px,2.6vw,38px);font-weight:800;letter-spacing:-.03em;color:var(--ink)}
+.ocean-src{font-size:14px;color:var(--muted)}
+.ocean-src a{text-decoration:underline}
+.ocean-fig{margin:0;display:flex;flex-direction:column;gap:22px;align-items:center}
+.ocean-fig svg{width:min(100%,440px);height:auto;overflow:visible}
+.ocean-fig figcaption{display:flex;flex-direction:column;gap:8px;font-size:15px;color:var(--text);max-width:420px}
+.ocean-fig figcaption span{display:flex;gap:10px;align-items:flex-start}
+.lg{flex:none;display:inline-block;margin-top:5px}
+.lg-ring{width:14px;height:14px;border-radius:50%;border:2px solid #C9A14E}
+.lg-dot{width:8px;height:8px;margin:7px 3px 0;border-radius:50%;background:#0F0F0F}
+.o-ring{stroke-dasharray:1163;stroke-dashoffset:0}
+.js-anim:not(.no-motion) .ocean-fig .o-ring{stroke-dashoffset:1163;transition:stroke-dashoffset 2.2s cubic-bezier(.2,.7,.2,1)}
+.js-anim:not(.no-motion) .ocean-fig.in .o-ring{stroke-dashoffset:0}
+.o-ring2{transform-origin:200px 200px;animation:spin 60s linear infinite}
+.o-ring2+.o-ring2{animation-direction:reverse;animation-duration:80s}
+@keyframes spin{to{transform:rotate(360deg)}}
+.o-pulse{transform-origin:262px 232px;animation:opulse 2.4s ease-out infinite}
+@keyframes opulse{from{transform:scale(1);opacity:.6}to{transform:scale(5);opacity:0}}
+.ocean-pts{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;margin-top:88px}
+.ocean-pts>div{border-top:3px solid #C9A14E;padding-top:24px}
+.ocean-pts b{display:block;font-size:24px;font-weight:800;letter-spacing:-.02em;margin-top:8px;color:var(--ink)}
+.ocean-pts p{margin-top:10px;color:#4A4A4A;font-size:17px;line-height:1.65}
+.ocean-close{margin-top:80px;font-size:clamp(26px,2.6vw,40px);font-weight:800;letter-spacing:-.03em;line-height:1.25;color:var(--ink)}
+@media (max-width:860px){.ocean-grid{grid-template-columns:1fr;gap:48px}.ocean-pts{margin-top:56px}.ocean-close{margin-top:56px}}
+@media (prefers-reduced-motion:reduce){.o-ring2,.o-pulse{animation:none}}
