@@ -52,7 +52,9 @@ p{margin:0}
 .wordmark{font-size:28px;font-weight:800;letter-spacing:-.04em;color:var(--ink)}
 .nav{display:flex;align-items:center;gap:34px;font-size:16px;font-weight:600;color:#1A1A1A}
 .nav a.nl:hover,.nav a[aria-current="page"]{color:var(--gold-dark)}
-.burger{display:none;width:52px;height:52px;border-radius:999px;border:1.5px solid var(--ink);background:#FFF;align-items:center;justify-content:center;cursor:pointer;padding:0}
+.burger{display:none;width:48px;height:48px;border-radius:12px;border:0;background:transparent;margin-right:-10px;transition:transform .25s ease;align-items:center;justify-content:center;cursor:pointer;padding:0}
+.burger:hover{transform:translateX(-2px)}
+.burger:active{transform:scale(.94)}
 .mmenu{position:fixed;inset:0;z-index:100;background:#FFF;display:none;flex-direction:column;padding:28px 28px 36px;overflow-y:auto}
 .menu-open .mmenu{display:flex;animation:menuin .35s cubic-bezier(.2,.7,.2,1) both}
 .menu-open{overflow:hidden}
