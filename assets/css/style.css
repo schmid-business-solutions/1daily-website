@@ -275,3 +275,10 @@ h1.wsplit .gold-words{background:none;animation:none}
 /* Mindestbeteiligung */
 .min-pill{display:inline-flex;align-self:flex-start;align-items:center;gap:8px;margin-top:6px;border:1px solid rgba(217,180,94,.55);border-radius:999px;padding:10px 20px;font-size:16px;font-weight:600;color:#E6E6E6;background:rgba(217,180,94,.08)}
 .min-pill b{color:#F3DE9C;font-weight:800}
+
+/* Gründerfoto */
+.portrait.photo{margin:0;padding:0;border:0;background:#1A1A1A;box-shadow:0 40px 80px -40px rgba(80,55,10,.45)}
+.portrait.photo picture,.portrait.photo img{position:absolute;inset:0;width:100%;height:100%}
+.portrait.photo img{object-fit:cover;object-position:50% 40%;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.portrait.photo:hover img{transform:scale(1.03)}
+.portrait.photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:70px 28px 24px;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.62));color:#F3DE9C;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
