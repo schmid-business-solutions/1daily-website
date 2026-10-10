@@ -211,3 +211,33 @@ blockquote{margin:0}
   .up,.zoom,.gold,.float,.blink,.rule,.reveal,.mmenu{animation:none!important}
   html{scroll-behavior:auto}
 }
+
+/* ===== Interaktive Animationen (anim.js) ===== */
+h1.wsplit .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.14em;margin-bottom:-.14em}
+h1.wsplit .wi{display:inline-block;animation:wordup .9s cubic-bezier(.2,.75,.2,1) both}
+@keyframes wordup{from{transform:translateY(105%) rotate(2deg);opacity:0}to{transform:none;opacity:1}}
+h1.wsplit .gold-words{background:none;animation:none}
+.gold-lit-pending{-webkit-text-fill-color:#C4C4C4;transition:-webkit-text-fill-color 1.1s cubic-bezier(.2,.7,.2,1)}
+.dark .gold-lit-pending{-webkit-text-fill-color:#5A5A5A}
+.gold-lit-pending.gold-lit{-webkit-text-fill-color:transparent}
+.rules .big,.funds .gold{font-variant-numeric:tabular-nums}
+.flow-track{position:relative;height:2px;background:var(--line);margin:0 0 44px;border-radius:2px}
+.flow-fill{position:absolute;inset:0;background:var(--gold-bg);transform:scaleX(0);transform-origin:left center;border-radius:2px;transition:transform .15s linear}
+.flow-dot{position:absolute;top:50%;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:#FFF;border:2px solid #D8D8D8;transition:border-color .4s,background .4s,box-shadow .4s,transform .4s}
+.flow-dot.on{border-color:#B8892E;background:#F3DE9C;box-shadow:0 0 0 6px rgba(217,180,94,.22);transform:scale(1.15)}
+[data-flow] .card{transition:transform .35s ease,border-color .5s ease,box-shadow .5s ease,opacity .5s ease}
+[data-flow] .card:not(.flow-on){opacity:.55}
+[data-flow] .card.flow-on{border-color:#E3CF9B}
+.grid{perspective:1200px}
+.card{position:relative}
+.card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(243,222,156,.28),transparent 60%)}
+.card.tilt::after{opacity:1}
+.card.tilt{transition:rotate .08s linear,border-color .35s,box-shadow .35s}
+.card{transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease,rotate .5s ease}
+@media (max-width:860px){
+  .flow-track{display:none}
+  [data-flow] .card:not(.flow-on){opacity:1}
+  [data-flow] .card{border-left:3px solid var(--line)}
+  [data-flow] .card.flow-on{border-left-color:#C9A14E}
+}
+.no-motion .gold-lit-pending{-webkit-text-fill-color:transparent}
