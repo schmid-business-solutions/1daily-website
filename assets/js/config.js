@@ -4,8 +4,8 @@
    ============================================================ */
 window.SITE_CONFIG = {
   // Formspree-Formular-IDs (https://formspree.io → New Form → ID aus der URL, z. B. "xyzabcde")
-  formspreeInvestor: "",   // Investoren-Interessensbekundung
-  formspreeContact:  "",   // Kontaktformular
+  formspreeInvestor: "mzedgreq",   // Investoren-Interessensbekundung
+  formspreeContact:  "mgaoykkw",   // Kontaktformular
 
   // E-Mail-Adressen (werden per JavaScript eingesetzt → Schutz vor Spam-Robotern)
   emailInfo:      "",      // z. B. "info@ihre-domain.ch"
