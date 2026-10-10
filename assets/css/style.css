@@ -271,3 +271,7 @@ h1.wsplit .gold-words{background:none;animation:none}
 .ocean-close{margin-top:80px;font-size:clamp(26px,2.6vw,40px);font-weight:800;letter-spacing:-.03em;line-height:1.25;color:var(--ink)}
 @media (max-width:860px){.ocean-grid{grid-template-columns:1fr;gap:48px}.ocean-pts{margin-top:56px}.ocean-close{margin-top:56px}}
 @media (prefers-reduced-motion:reduce){.o-ring2,.o-pulse{animation:none}}
+
+/* Mindestbeteiligung */
+.min-pill{display:inline-flex;align-self:flex-start;align-items:center;gap:8px;margin-top:6px;border:1px solid rgba(217,180,94,.55);border-radius:999px;padding:10px 20px;font-size:16px;font-weight:600;color:#E6E6E6;background:rgba(217,180,94,.08)}
+.min-pill b{color:#F3DE9C;font-weight:800}
