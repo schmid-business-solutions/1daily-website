@@ -310,3 +310,12 @@ html.theme-anim,html.theme-anim *{transition:background-color .45s ease,color .4
 .facts dd{overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
 @media (max-width:1000px){.facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:600px){.facts{grid-template-columns:1fr}.facts>div{padding:20px 0}}
+
+/* Logo (Wortmarke) – hell/dunkel */
+.wordmark{display:inline-flex;align-items:center;line-height:0}
+.wordmark .logo{height:30px;width:auto;display:block}
+.wordmark .logo-d{display:none}
+html[data-theme="dark"] .wordmark .logo-l{display:none}
+html[data-theme="dark"] .wordmark .logo-d{display:block}
+.site-footer .wordmark .logo{height:26px}
+@media (max-width:860px){.wordmark .logo{height:27px}}
