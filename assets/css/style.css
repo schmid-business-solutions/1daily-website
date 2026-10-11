@@ -303,3 +303,10 @@ html.theme-anim,html.theme-anim *{transition:background-color .45s ease,color .4
 .ir-docs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
 .ir-docs li{display:flex;align-items:center;gap:12px;font-size:17px;font-weight:600;color:var(--ink)}
 .ir-docs svg{flex:none;width:30px;height:30px;padding:6px;border-radius:50%;background:var(--gold-bg);color:#111}
+
+/* Faktenraster (Impressum, Über uns): 3 Spalten Desktop, 2 Tablet, 1 Handy */
+.facts{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:40px}
+.facts>div{padding:28px 0}
+.facts dd{overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+@media (max-width:1000px){.facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.facts{grid-template-columns:1fr}.facts>div{padding:20px 0}}
