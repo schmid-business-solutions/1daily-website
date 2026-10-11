@@ -1,0 +1,68 @@
+/* 1daily AG – Dunkles Farbschema (aktiv mit <html data-theme="dark">) */
+html[data-theme="dark"]{
+  --ink:#F5F5F5;--text:#B9B9B9;--muted:#8E8E8E;--line:#252525;--cream:#111111;--goldline:#3A301C;
+  --gold-dark:#D9B45E;
+  --gold-text:linear-gradient(100deg,#B8892E 0%,#E2C27A 30%,#F6E3A6 50%,#E2C27A 70%,#B8892E 100%);
+  color-scheme:dark;
+}
+html[data-theme="dark"] body{background:#0A0A0A;color:#EDEDED}
+html[data-theme="dark"] .gold{background-image:var(--gold-text)}
+
+/* Header & Navigation */
+html[data-theme="dark"] .nav{color:#E6E6E6}
+html[data-theme="dark"] .mmenu{background:#0A0A0A}
+html[data-theme="dark"] .mmenu-bottom small,html[data-theme="dark"] .foot-legal{color:#8E8E8E}
+html[data-theme="dark"] .burger svg path[stroke="#0F0F0F"]{stroke:#F5F5F5}
+html[data-theme="dark"] .burger.close svg path{stroke:#F5F5F5}
+html[data-theme="dark"] .burger.close{border:1.5px solid #3A3A3A;background:transparent}
+
+/* Buttons: invertiert */
+html[data-theme="dark"] .btn-dark{background:var(--gold-bg);color:#111;font-weight:800}
+html[data-theme="dark"] .btn-light{background:transparent;color:#F5F5F5;border-color:#F5F5F5}
+html[data-theme="dark"] .btn:hover{box-shadow:0 14px 34px -14px rgba(217,180,94,.55)}
+
+/* Hero & Globus */
+html[data-theme="dark"] .pill{border-color:rgba(217,180,94,.45);color:#DADADA}
+html[data-theme="dark"] .globe-fade{background:linear-gradient(180deg,rgba(10,10,10,0) 0%,#0A0A0A 90%)}
+html[data-theme="dark"] .chip{background:rgba(20,20,20,.88);border-color:#3A301C;box-shadow:0 24px 50px -30px rgba(0,0,0,.9)}
+html[data-theme="dark"] .chip span{color:#F0F0F0}
+
+/* Karten & Flächen */
+html[data-theme="dark"] .card{background:#121212;border-color:#242424}
+html[data-theme="dark"] .card:hover{border-color:#8A6624;box-shadow:0 30px 60px -36px rgba(217,180,94,.25)}
+html[data-theme="dark"] .card::after{background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(217,180,94,.14),transparent 60%)}
+html[data-theme="dark"] .dark{background:#111111;border-top:1px solid #1E1E1E;border-bottom:1px solid #1E1E1E}
+html[data-theme="dark"] .funds>div{background:#181818;border-color:#2A2A2A}
+html[data-theme="dark"] [style*="background:var(--ink)"]{background:#141414!important;border:1.5px solid #3A301C!important}
+html[data-theme="dark"] .mix p,html[data-theme="dark"] .ocean-pts p{color:#A8A8A8}
+html[data-theme="dark"] [style*="color:#4A4A4A"]{color:#A8A8A8!important}
+html[data-theme="dark"] .quote{background:#141414}
+html[data-theme="dark"] .portrait{border-color:#2A2A2A}
+
+/* Animationen */
+html[data-theme="dark"] .gold-lit-pending{-webkit-text-fill-color:#4A4A4A}
+html[data-theme="dark"] .gold-lit-pending.gold-lit{-webkit-text-fill-color:transparent}
+html[data-theme="dark"] .flow-dot{background:#0A0A0A;border-color:#3A3A3A}
+html[data-theme="dark"] .flow-dot.on{background:#D9B45E;border-color:#F3DE9C}
+html[data-theme="dark"] [data-flow] .card.flow-on{border-color:#5C4A22}
+
+/* Ozean-Grafik */
+html[data-theme="dark"] .ocean-fig circle[fill="#0F0F0F"]{fill:#F5F5F5}
+html[data-theme="dark"] .lg-dot{background:#F5F5F5}
+
+/* Formulare */
+html[data-theme="dark"] .form-card{background:#121212;border-color:#242424}
+html[data-theme="dark"] .field input,html[data-theme="dark"] .field select,html[data-theme="dark"] .field textarea{background:#0A0A0A;border-color:#333;color:#F0F0F0}
+html[data-theme="dark"] .field input:focus,html[data-theme="dark"] .field select:focus,html[data-theme="dark"] .field textarea:focus{border-color:#D9B45E;box-shadow:0 0 0 4px rgba(217,180,94,.18)}
+html[data-theme="dark"] .risk{background:#141414}
+html[data-theme="dark"] .form-status.err{color:#FF8A7A}
+
+/* Footer */
+html[data-theme="dark"] .site-footer{background:#0F0F0F;border-top-color:#1E1E1E}
+html[data-theme="dark"] .foot-nav{color:#DADADA}
+html[data-theme="dark"] .lang{border-color:#F5F5F5}
+html[data-theme="dark"] .lang a[aria-current="true"]{background:#F5F5F5;color:#0A0A0A}
+
+/* Vorschau-Hinweis */
+.theme-badge{position:fixed;right:16px;bottom:16px;z-index:300;display:flex;align-items:center;gap:10px;background:#F5F5F5;color:#0A0A0A;font:700 12px/1 "Plus Jakarta Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:10px 14px;border-radius:999px;box-shadow:0 10px 30px -10px rgba(0,0,0,.6)}
+.theme-badge a{text-decoration:underline;color:#8A6219}

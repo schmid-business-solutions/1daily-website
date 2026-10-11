@@ -71,3 +71,13 @@
     try { window.startGlobe(cv, JSON.parse(cv.getAttribute('data-cfg') || '{}')); } catch (e) {}
   }
 })();
+
+/* Hinweis bei dunkler Vorschau */
+(function () {
+  if (document.documentElement.getAttribute('data-theme') !== 'dark') return;
+  var en = document.documentElement.lang === 'en';
+  var b = document.createElement('div');
+  b.className = 'theme-badge';
+  b.innerHTML = (en ? 'Dark preview' : 'Dunkle Vorschau') + ' · <a href="?theme=light">' + (en ? 'back to light' : 'zurück zu Hell') + '</a>';
+  document.body.appendChild(b);
+})();
