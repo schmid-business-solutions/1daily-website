@@ -72,12 +72,35 @@
   }
 })();
 
-/* Hinweis bei dunkler Vorschau */
+/* Farbschema: hell / dunkel */
 (function () {
-  if (document.documentElement.getAttribute('data-theme') !== 'dark') return;
-  var en = document.documentElement.lang === 'en';
-  var b = document.createElement('div');
-  b.className = 'theme-badge';
-  b.innerHTML = (en ? 'Dark preview' : 'Dunkle Vorschau') + ' · <a href="?theme=light">' + (en ? 'back to light' : 'zurück zu Hell') + '</a>';
-  document.body.appendChild(b);
+  var d = document.documentElement;
+  var mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+  var meta = document.querySelector('meta[name="theme-color"]');
+  function stored() { try { return localStorage.getItem('theme'); } catch (e) { return null; } }
+  function sync() {
+    var dark = d.getAttribute('data-theme') === 'dark';
+    if (meta) meta.setAttribute('content', dark ? '#0A0A0A' : '#FFFFFF');
+    document.querySelectorAll('[data-theme-set]').forEach(function (b) {
+      b.setAttribute('aria-pressed', (b.getAttribute('data-theme-set') === 'dark') === dark ? 'true' : 'false');
+    });
+  }
+  function apply(t, save) {
+    d.classList.add('theme-anim');
+    if (t === 'dark') d.setAttribute('data-theme', 'dark'); else d.removeAttribute('data-theme');
+    if (save) { try { localStorage.setItem('theme', t); } catch (e) {} }
+    sync();
+    setTimeout(function () { d.classList.remove('theme-anim'); }, 500);
+  }
+  document.querySelectorAll('[data-theme-toggle]').forEach(function (b) {
+    b.addEventListener('click', function () { apply(d.getAttribute('data-theme') === 'dark' ? 'light' : 'dark', true); });
+  });
+  document.querySelectorAll('[data-theme-set]').forEach(function (b) {
+    b.addEventListener('click', function () { apply(b.getAttribute('data-theme-set'), true); });
+  });
+  if (mq) {
+    var onChange = function (e) { if (!stored()) apply(e.matches ? 'dark' : 'light', false); };
+    if (mq.addEventListener) mq.addEventListener('change', onChange); else if (mq.addListener) mq.addListener(onChange);
+  }
+  sync();
 })();

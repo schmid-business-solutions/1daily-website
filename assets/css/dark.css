@@ -63,6 +63,3 @@ html[data-theme="dark"] .foot-nav{color:#DADADA}
 html[data-theme="dark"] .lang{border-color:#F5F5F5}
 html[data-theme="dark"] .lang a[aria-current="true"]{background:#F5F5F5;color:#0A0A0A}
 
-/* Vorschau-Hinweis */
-.theme-badge{position:fixed;right:16px;bottom:16px;z-index:300;display:flex;align-items:center;gap:10px;background:#F5F5F5;color:#0A0A0A;font:700 12px/1 "Plus Jakarta Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:10px 14px;border-radius:999px;box-shadow:0 10px 30px -10px rgba(0,0,0,.6)}
-.theme-badge a{text-decoration:underline;color:#8A6219}
